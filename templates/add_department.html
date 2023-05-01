@@ -5,8 +5,8 @@
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>
-            {{ form.title.label }}<br>
-            {{ form.title(class="form-control") }}<br>
+            {{ form.title.label }}
+            {{ form.title(class="form-control") }}
             {% for error in form.title.errors %}
                 <div class="alert alert-danger" role="alert">
                     {{ error }}
@@ -14,8 +14,8 @@
             {% endfor %}
         </p>
         <p>
-            {{ form.chief.label }}<br>
-            {{ form.chief(class="form-control") }}<br>
+            {{ form.chief.label }}
+            {{ form.chief(class="form-control") }}
             {% for error in form.chief.errors %}
                 <div class="alert alert-danger" role="alert">
                     {{ error }}
@@ -23,8 +23,8 @@
             {% endfor %}
         </p>
         <p>
-            {{ form.members.label }}<br>
-            {{ form.members(class="form-control") }}<br>
+            {{ form.members.label }}
+            {{ form.members(class="form-control") }}
             {% for error in form.members.errors %}
                 <div class="alert alert-danger" role="alert">
                     {{ error }}
@@ -32,8 +32,8 @@
             {% endfor %}
         </p>
         <p>
-            {{ form.email.label }}<br>
-            {{ form.email(class="form-control", type="email") }}<br>
+            {{ form.email.label }}
+            {{ form.email(class="form-control", type="email") }}
             {% for error in form.email.errors %}
                 <div class="alert alert-danger" role="alert">
                     {{ error }}

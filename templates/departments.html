@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4 align="center">Department log</h4>
+    {% for department in departments %}
+    <h3>Action #{{ department.id }}</h3>
+    <table class="table table-borderless">
+        <thead>
+            <tr class="table-secondary">
+                <th scope="col" width="30%">Title of department</th>
+                <th scope="col">chief</th>
+                <th scope="col">members</th>
+                <th scope="col" width="30%">Department Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-primary align-middle">
+                <td>{{ department.title }}</td>
+                <td>{{ department.chief }}</td>
+                <td>{{ department.members }}</td>
+                <td>{{ department.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% if current_user.is_authenticated %}
+        {% if current_user.id == department.chief or current_user.id == 1 %}
+            <div>
+                <a href="/department/{{ department.id }}" class="btn btn-warning">
+                    Изменить
+                </a>
+                <a href="/department_delete/{{ department.id }}" class="btn btn-danger">
+                    Удалить
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+    {% endfor %}
+<br>
+<a href="departments" class="btn btn-secondary">
+            Добавить департамент</a>
+{% endblock %}

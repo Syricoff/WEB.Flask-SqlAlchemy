@@ -1,4 +1,9 @@
-h4 {
-   color: #d22e3a
-   padding-left: 20000px
+td {
+text-align: center;
+height: 50px;
+}
+
+table {
+align: center;
+text-align: center;
 }
